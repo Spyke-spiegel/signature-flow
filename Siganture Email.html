@@ -14,11 +14,16 @@
 			line-height: 1.65;
 		}
 
-		/* Message style */
 		.body-wrap img {
 			max-width: 100%;
 			margin: 0 auto;
 			display: block;
+		}
+
+		body {
+			width: 100% !important;
+			height: 100%;
+			background: #f2f2f2;
 		}
 
 		.body-wrap {
@@ -26,6 +31,89 @@
 			background: white;
 			max-width: 800px !important;
 			margin: 0 auto !important;
+		}
+
+		a {
+			color: black;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		.text-center {
+			text-align: center;
+		}
+
+		.text-right {
+			text-align: right;
+		}
+
+		.text-left {
+			text-align: left;
+		}
+
+		.button {
+			display: inline-block;
+			color: white;
+			background: #71bc37;
+			border: solid #71bc37;
+			border-width: 10px 20px 8px;
+			font-weight: bold;
+			border-radius: 4px;
+		}
+
+		.button:hover {
+			text-decoration: none;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin-bottom: 20px;
+			line-height: 1.25;
+		}
+
+		h1 {
+			font-size: 18px;
+		}
+
+		h2 {
+			font-size: 16px;
+		}
+
+		h3 {
+			font-size: 14px;
+		}
+
+		h4 {
+			font-size: 14px;
+		}
+
+		h5 {
+			font-size: 14px;
+		}
+
+		p,
+		ul,
+		ol {
+			font-size: 14px;
+			font-weight: normal;
+			margin-bottom: 20px;
+		}
+
+		ul,
+		ol {
+			margin-left: 20px
+		}
+
+		li {
+			margin-bottom: 6px;
+			margin-left: 25px
 		}
 
 		.container {
@@ -76,65 +164,19 @@
 			text-decoration: underline;
 		}
 
-
-		/* New Signature */
-
-		.signature2 {
-			display: grid;
-			grid-template-rows: 120px 60px 60px 60px;
-			grid-template-columns: 200px 200px;
-			width: auto;
-			height: auto;
+		.signature {
+			width: 320px;
+			background: white;
+			margin: 0;
+			font-size: 12px;
+			font-family: helvetica;
+			vertical-align: middle;
+			text-align: left;
 		}
 
-		.image{
-			grid-column: 1 / span 2;
-			grid-row: 1;
-			align-self: center;
-			width:inherit;
-			height: auto;
+		.signature p {
+			margin: 0
 		}
-
-		#logo{
-			width: 100%;
-			height: auto;
-		}
-
-		.image > img{
-			width: -moz-available;
-		}
-
-		.name {
-			grid-column: 1;
-			grid-row: 2;
-			align-self: center;
-		}
-
-		.address {
-			grid-column: 1 / span 2;
-			grid-row: 3;
-			align-self: center;
-		}
-
-		.website {
-			grid-column: 1;
-			grid-row: 4;
-			align-self: center;
-		}
-
-		H1, h2, h3{
-			line-height: 1;
-			font-weight: 500;
-		}
-
-		h1{
-			font-size: 15px;
-		}
-
-		h2{
-			font-size: 13px;
-		}
-
 	</style>
 </head>
 
@@ -149,7 +191,7 @@
 						<td align="center" class="masthead">
 
 							<h1><a href="http://bit.ly/native-union-home"><img
-										src="https://raw.githubusercontent.com/Spyke-spiegel/signature-flow/master/Native_Union_logo.png" height="100"></a></h1>
+										src="http://52.163.82.226/NU_Logo_Email.jpg" height="100"></a></h1>
 
 						</td>
 					</tr>
@@ -192,31 +234,58 @@
 		</tr>
 	</table>
 	<br>
-
-
-	<br />
-	<br />
-
-	<div class="signature2">
-		<div class="image">
-			<img
-				src="https://cdn.shopify.com/s/files/1/0066/9050/4822/files/nu-email-signature-05.2020.jpg?v=1589394126" id="logo">
-		</div>
-		<div class="name">
-			<h1><strong>Florent Ayot</strong></h1>
-			<H1>IT Consultant</H1>
-		</div>
-		<div class="address">
-			<h2>+33 7 69 79 98 95</h2>
-			<h2>France: 16 cours Albert 1er, 75008 Paris</h2>
-			<h2>Hong Kong : 2/F East Town Bldg, 41 Lockhart Road, Wan Chai</h2>
-		</div>
-		<div class="website">
-			<a href="wwww.nativeunion.com">nativeunion.com</a>
-		</div>
-
-	</div>
-
+	<table class="signature">
+		<tr>
+			<td valign="middle" colspan="6"><a href="http://bit.ly/native-union-home"><img height="50" width="50"
+						align="left"
+						src="https://cdn.shopify.com/s/files/1/0066/9050/4822/files/NU_Logo_Signature.jpg?10011"></a>
+				<div style="padding: 3% 0;" <span
+					style="white-space: nowrap;padding-left: 65px; margin:0; font-size:12px; vertical-align: middle;">
+					<b>&nbsp;&nbsp;&nbsp;@{body('Get_user_profile_(V2)')?['givenName']}
+						@{body('Get_user_profile_(V2)')?['surname']}</b><br>
+					&nbsp;&nbsp;&nbsp;@{body('Get_user_profile_(V2)')?['jobTitle']}</span></div>
+			</td>
+		<tr>
+			<td colspan="6" style="color:#666666; font-size:11px;">
+				<span class="linesignature" style="font-size:11px;">@{body('Get_user_profile_(V2)')?['streetAddress']}
+					@{body('Get_user_profile_(V2)')?['postalCode']} @{body('Get_user_profile_(V2)')?['city']}</span>
+				<span class="linesignature" style="font-size:11px;">@{body('Get_user_profile_(V2)')?['state']}
+					@{body('Get_user_profile_(V2)')?['country']}</span>
+				<br>
+				<span class="linesignature" style="font-size:11px;">Tel:
+					@{body('Get_user_profile_(V2)')?['mobilePhone']}</span>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="6"><a href="https://www.nativeunion.com/the-stow-collection"><img
+						src="https://cdn.shopify.com/s/files/1/0066/9050/4822/files/Signature_Product_Image_Stow.jpg?10011"
+						height="123" width="320"></a></td>
+		</tr>
+		<tr>
+			<td style="width:64%">
+				<b>
+					<a href="https://www.nativeunion.com/the-stow-collection">Discover the Stow Collection</a>
+					<br />
+					<a href="http://www.nativeunion.com/about/">Learn more about Native Union</a>
+				</b>
+			</td>
+			<td style="width:12%">
+				<center><a href="http://bit.ly/native-union-facebook"><img
+							src="https://cdn.shopify.com/s/files/1/0066/9050/4822/files/Signature_Facebook_Logo.jpg?10011"
+							height="15" width="7"></a></center>
+			</td>
+			<td style="width:12%">
+				<center><a href="http://bit.ly/native-union-twitter"><img
+							src="https://cdn.shopify.com/s/files/1/0066/9050/4822/files/Signature_Twitter_Logo.jpg?10011"
+							height="15" width="17"></a></center>
+			</td>
+			<td style="width:12%">
+				<center><a href="http://bit.ly/native-union-instagram"><img
+							src="https://cdn.shopify.com/s/files/1/0066/9050/4822/files/Signature_Instagram_Logo.jpg?10011"
+							height="15" width="13"></a></center>
+			</td>
+		</tr>
+	</table>
 </body>
 
 </html>
