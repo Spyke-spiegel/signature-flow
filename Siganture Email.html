@@ -7,23 +7,31 @@
 
 	<style type="text/css">
 		* {
-			margin: 0;
-			padding: 0;
+			/* margin: 0; */
+			/* padding: 0; */
 			font-size: 100%;
 			font-family: 'Avenir Next', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 			line-height: 1.65;
-		}
-
-		.body-wrap img {
-			max-width: 100%;
-			margin: 0 auto;
-			display: block;
 		}
 
 		body {
 			width: 100% !important;
 			height: 100%;
 			background: #f2f2f2;
+		}
+
+		/* Css Message presentation */
+
+		h1,
+		h2,
+		h3 {
+			margin: 0;
+		}
+
+		.body-wrap img {
+			max-width: 100%;
+			margin: 0 auto;
+			display: block;
 		}
 
 		.body-wrap {
@@ -33,149 +41,33 @@
 			margin: 0 auto !important;
 		}
 
+		/* Siganture CSS */
+		.banner {
+			height: 100px;
+			width: 350px;
+		}
+
+		#row2>td {
+			padding: 15px 0 15px 0;
+		}
+
+		h2 {
+			font-weight: 500;
+			font-size: 15px;
+		}
+
+		H3 {
+			font-weight: 500;
+			font-size: 12px;
+		}
+
 		a {
-			color: black;
 			text-decoration: none;
+			color: black;
 		}
 
 		a:hover {
 			text-decoration: underline;
-		}
-
-		.text-center {
-			text-align: center;
-		}
-
-		.text-right {
-			text-align: right;
-		}
-
-		.text-left {
-			text-align: left;
-		}
-
-		.button {
-			display: inline-block;
-			color: white;
-			background: #71bc37;
-			border: solid #71bc37;
-			border-width: 10px 20px 8px;
-			font-weight: bold;
-			border-radius: 4px;
-		}
-
-		.button:hover {
-			text-decoration: none;
-		}
-
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			margin-bottom: 20px;
-			line-height: 1.25;
-		}
-
-		h1 {
-			font-size: 18px;
-		}
-
-		h2 {
-			font-size: 16px;
-		}
-
-		h3 {
-			font-size: 14px;
-		}
-
-		h4 {
-			font-size: 14px;
-		}
-
-		h5 {
-			font-size: 14px;
-		}
-
-		p,
-		ul,
-		ol {
-			font-size: 14px;
-			font-weight: normal;
-			margin-bottom: 20px;
-		}
-
-		ul,
-		ol {
-			margin-left: 20px
-		}
-
-		li {
-			margin-bottom: 6px;
-			margin-left: 25px
-		}
-
-		.container {
-			display: block !important;
-			clear: both !important;
-		}
-
-		.container table {
-			width: 100% !important;
-			border-collapse: collapse;
-		}
-
-		.container .masthead {
-			padding: 20px 0;
-			background: white;
-			color: white;
-		}
-
-		.container .masthead h1 {
-			margin: 0 auto !important;
-			max-width: 90%;
-			text-transform: uppercase;
-		}
-
-		.container .content {
-			background: white;
-			padding: 30px 35px;
-		}
-
-		.container .content.footer {
-			background: none;
-		}
-
-		.container .content.footer p {
-			margin-bottom: 0;
-			color: #888;
-			text-align: center;
-			font-size: 12px;
-		}
-
-		.container .content.footer a {
-			color: #888;
-			text-decoration: none;
-			font-weight: bold;
-		}
-
-		.container .content.footer a:hover {
-			text-decoration: underline;
-		}
-
-		.signature {
-			width: 320px;
-			background: white;
-			margin: 0;
-			font-size: 12px;
-			font-family: helvetica;
-			vertical-align: middle;
-			text-align: left;
-		}
-
-		.signature p {
-			margin: 0
 		}
 	</style>
 </head>
@@ -191,7 +83,8 @@
 						<td align="center" class="masthead">
 
 							<h1><a href="http://bit.ly/native-union-home"><img
-										src="http://52.163.82.226/NU_Logo_Email.jpg" height="100"></a></h1>
+										src="https://cdn.shopify.com/s/files/1/0066/9050/4822/files/Native_Union_logo.png?v=1589827816"
+										height="100"></a></h1>
 
 						</td>
 					</tr>
@@ -234,55 +127,30 @@
 		</tr>
 	</table>
 	<br>
+	<br><label for=""></label>
+
 	<table class="signature">
 		<tr>
-			<td valign="middle" colspan="6"><a href="http://bit.ly/native-union-home"><img height="50" width="50"
-						align="left"
-						src="https://cdn.shopify.com/s/files/1/0066/9050/4822/files/NU_Logo_Signature.jpg?10011"></a>
-				<div style="padding: 3% 0;" <span
-					style="white-space: nowrap;padding-left: 65px; margin:0; font-size:12px; vertical-align: middle;">
-					<b>&nbsp;&nbsp;&nbsp;@{body('Get_user_profile_(V2)')?['givenName']}
-						@{body('Get_user_profile_(V2)')?['surname']}</b><br>
-					&nbsp;&nbsp;&nbsp;@{body('Get_user_profile_(V2)')?['jobTitle']}</span></div>
-			</td>
-		<tr>
-			<td colspan="6" style="color:#666666; font-size:11px;">
-				<span class="linesignature" style="font-size:11px;">@{body('Get_user_profile_(V2)')?['streetAddress']}
-					@{body('Get_user_profile_(V2)')?['postalCode']} @{body('Get_user_profile_(V2)')?['city']}</span>
-				<span class="linesignature" style="font-size:11px;">@{body('Get_user_profile_(V2)')?['state']}
-					@{body('Get_user_profile_(V2)')?['country']}</span>
-				<br>
-				<span class="linesignature" style="font-size:11px;">Tel:
-					@{body('Get_user_profile_(V2)')?['mobilePhone']}</span>
+			<td>
+				<img class="banner"
+					src="https://cdn.shopify.com/s/files/1/0066/9050/4822/files/nu-email-signature-05.2020.jpg?v=1589394126">
 			</td>
 		</tr>
 		<tr>
-			<td colspan="6"><a href="https://www.nativeunion.com/the-stow-collection"><img
-						src="https://cdn.shopify.com/s/files/1/0066/9050/4822/files/Signature_Product_Image_Stow.jpg?10011"
-						height="123" width="320"></a></td>
+			<td>
+				<H1>Florent Ayot</H1>
+				<h2>IT consultant</h2>
+			</td>
+		</tr>
+		<tr id="row2">
+			<td>
+				<h3>41 lockhart roads</h3>
+				<h3>Wan chai, Hong Kong</h3>
+			</td>
 		</tr>
 		<tr>
-			<td style="width:64%">
-				<b>
-					<a href="https://www.nativeunion.com/the-stow-collection">Discover the Stow Collection</a>
-					<br />
-					<a href="http://www.nativeunion.com/about/">Learn more about Native Union</a>
-				</b>
-			</td>
-			<td style="width:12%">
-				<center><a href="http://bit.ly/native-union-facebook"><img
-							src="https://cdn.shopify.com/s/files/1/0066/9050/4822/files/Signature_Facebook_Logo.jpg?10011"
-							height="15" width="7"></a></center>
-			</td>
-			<td style="width:12%">
-				<center><a href="http://bit.ly/native-union-twitter"><img
-							src="https://cdn.shopify.com/s/files/1/0066/9050/4822/files/Signature_Twitter_Logo.jpg?10011"
-							height="15" width="17"></a></center>
-			</td>
-			<td style="width:12%">
-				<center><a href="http://bit.ly/native-union-instagram"><img
-							src="https://cdn.shopify.com/s/files/1/0066/9050/4822/files/Signature_Instagram_Logo.jpg?10011"
-							height="15" width="13"></a></center>
+			<td>
+				<a href="wwww.nativeunion.com">nativeunion.com</a>
 			</td>
 		</tr>
 	</table>
